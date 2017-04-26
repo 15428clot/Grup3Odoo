@@ -1,0 +1,36 @@
+<openerp>
+	<data>
+		<record id="vista_de_formulari_calculadora" model="ir.ui.view">
+			<field name="name">Formulari calculadora interessos</field>
+			<field name="model">calculadora</field>
+			<field name="arch" type="xml">
+				<form string="calculadora">
+					<header>
+						<button string="Calcular Interessos" type="object" name="calcula"/>
+					</header>
+					<group>
+						Capital inicial: 
+						<field name="capitalinicial" class="oe_inline"/>
+						
+						Tipus d'interes: 
+						<field name="interes" class="oe_inline"/>
+						
+						Temps: 
+						<field name="temps" class="oe_inline"/>
+						<separator/>
+						<separator/>
+					</group>
+					<group>
+						Capital final: 
+						<field name="capitalfinal" class="oe_inline"/>
+						Interessos: 
+						<field name="interesos" class="oe_inline"/>
+						<separator/>
+					</group>
+				</form>
+			</field>
+		</record>
+		<act_window id="accio_calc" name="calc" res_model="calculadora" view_mode="tree,form"/>
+		<menuitem id="menu_calc" name="calculadora" action="accio_calc" sequence="10"/>
+	</data>
+</openerp>
